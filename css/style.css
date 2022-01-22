@@ -20,3 +20,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+.page {
+  margin: 0 auto;
+  max-width: 1410px;
+}

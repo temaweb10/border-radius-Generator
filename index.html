@@ -9,84 +9,50 @@
 </head>
 
 <body>
+    <div class="page">
 
-    <div class="inputs">
+        <div class="inputs">
 
-        <div class="column">
-            <div class="input">
-                <label for="topLeft">top-left</label>
-                <input type="range" id="topLeft" max="100" min="0" step="1">
+            <div class="column">
+                <div class="input">
+                    <label for="topLeft">top-left</label>
+                    <input type="range" id="topLeft" max="100" min="0" step="1" value="8">
+                </div>
+
+                <div class="input">
+                    <label for="bottomLeft">bottom-left</label>
+                    <input type="range" id="bottomLeft" max="100" min="0" step="1" value="8">
+                </div>
+
             </div>
 
-            <div class="input">
-                <label for="bottomLeft">bottom-left</label>
-                <input type="range" id="bottomLeft" max="100" min="0" step="1">
+            <div class="column">
+
+                <div class="result" style="height: 200px; width: 300px; background-color: rgb(5, 255, 213);">
+                </div>
+
             </div>
 
-        </div>
+            <div class="column">
 
-        <div class="column">
+                <div class="input">
+                    <label for="topRight">top-right</label>
+                    <input type="range" id="topRight" max="100" min="0" step="1" value="8">
+                </div>
 
-            <div class="result" style="height: 200px; width: 300px; background-color: rgb(5, 255, 213);">
+                <div class="input">
+                    <label for="bottomRight">bottom-right</label>
+                    <input type="range" id="bottomRight" max="100" min="0" step="1" value="8">
+                </div>
+
             </div>
 
-        </div>
+        </div><!-- inputs -->
 
-        <div class="column">
-
-            <div class="input">
-                <label for="topRight">top-right</label>
-                <input type="range" id="topRight" max="100" min="0" step="1">
-            </div>
-
-            <div class="input">
-                <label for="bottomRight">bottom-right</label>
-                <input type="range" id="bottomRight" max="100" min="0" step="1">
-            </div>
-
-        </div>
-
-    </div><!-- inputs -->
-
-    <textarea id="textarea" readonly></textarea>
-    <button id="textCopied">Копировать</button>
-
-    <script>
-
-        function borderRadius() {
-            let topRight = document.getElementById('topRight').value
-
-            let topLeft = document.getElementById('topLeft').value
-
-            let bottomLeft = document.getElementById('bottomLeft').value
-
-            let bottomRight = document.getElementById('bottomRight').value
-
-
-            let textarea = document.getElementById('textarea')
-
-            let result = document.querySelector('.result')
-
-            result.style.borderBottomLeftRadius = `${bottomLeft}px`
-            result.style.borderBottomRightRadius = `${bottomRight}px`
-            result.style.borderTopLeftRadius = `${topLeft}px`
-            result.style.borderTopRightRadius = `${topRight}px`
-
-            let str = `border-radius`
-
-            textarea.innerHTML = `border-top-left-radius: ${topLeft}px\nborder-top-right-radius:${topRight}px\nborder-bottom-left-radius: ${bottomLeft}px\nborder-bottom-right-radius: ${bottomRight}px `
-        }
-
-        for (let item of document.querySelectorAll('input')) {
-            item.addEventListener('input', borderRadius)
-        }
-
-        textCopied.onpase = function (e) {
-            console.log()
-        }
-
-        borderRadius()
-    </script>
+        <textarea id="textarea" readonly></textarea>
+    </div>
+    <!--!page-->
+    <script src="js/app.js"></script>
 </body>
 
 </html>
