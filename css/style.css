@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.inputs {
+  display: flex;
+  padding: 32px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
